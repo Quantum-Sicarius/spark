@@ -1,0 +1,5 @@
+---
+- name: Install telegram desktop
+  aur: name=telegram-desktop-bin state=present
+  tags:
+    - telegram

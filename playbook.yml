@@ -49,6 +49,8 @@
     - { role: wttr, tags: ['wttr'] }
     - { role: hostsctl, tags: ['hostsctl'], when: "hostsctl is defined" }
     - { role: steam, tags: ['steam'] }
+    - { role: telegram, tags: ['telegram'] }
+
   vars_prompt:
     - name: user_password
       prompt: "Enter desired user password"
