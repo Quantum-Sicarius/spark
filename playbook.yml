@@ -50,6 +50,7 @@
     - { role: hostsctl, tags: ['hostsctl'], when: "hostsctl is defined" }
     - { role: steam, tags: ['steam'] }
     - { role: telegram, tags: ['telegram'] }
+    - { role: vlc, tags: ['vlc'] }
 
   vars_prompt:
     - name: user_password
