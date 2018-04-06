@@ -1,0 +1,20 @@
+---
+- name: Install transmission-cli
+  pacman: name=transmission-cli state=present
+
+- name: Install transmission-gtk
+  pacman: name=transmission-gtk state=present
+  
+- name: Jail transmission-cli
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/transmission-cli
+        state=link
+  tags:
+    - firejail
+    
+- name: Jail transmission-gtk
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/transmission-gtk
+        state=link
+  tags:
+    - firejail

@@ -1,0 +1,54 @@
+---
+- hosts: localhost
+  become: yes
+  roles:
+    - { role: base, tags: ['base'] }
+    - { role: gnupg, tags: ['gnupg'] }
+    - { role: cron, tags: ['cron'] }
+    - { role: microcode, tags: ['microcode'], when: "'GenuineIntel' in ansible_processor" }
+    #- { role: hardened, tags: ['hardened'] }
+    - { role: ssh, tags: ['ssh'] }
+    - { role: dotfiles, tags: ['dotfiles'], when: "dotfiles is defined" }
+    - { role: ssd, tags: ['ssd'] }
+    - { role: fonts, tags: ['fonts'] }
+    - { role: x, tags: ['x'] }
+    - { role: gdm, tags: ['gdm'] }
+    - { role: gnome, tags: ['gnome'] }
+    - { role: pass, tags: ['pass'] }
+    - { role: iptables, tags: ['iptables'] }
+    - { role: nettools, tags: ['nettools'] }
+    - { role: networkmanager, tags: ['networkmanager'] }
+    - { role: macchiato, tags: ['macchiato'] }
+    - { role: ntp, tags: ['ntp'] }
+    - { role: firejail, tags: ['firejail'] }
+    - { role: tor, tags: ['tor'], when: "tor is defined" }
+    - { role: unbound, tags: ['unbound'] }
+    - { role: editors, tags: ['editors'] }
+    - { role: filesystems, tags: ['filesystems'] }
+    - { role: archive, tags: ['archive'] }
+    - { role: udisks, tags: ['udisks'] }
+    - { role: spell, tags: ['spell'] }
+    - { role: browsers, tags: ['browsers'] }
+    - { role: media, tags: ['media'] }
+    - { role: mpd, tags: ['mpd'] }
+    - { role: mpv, tags: ['mpv'] }
+    - { role: git-annex, tags: ['git-annex'], when: "gitannex is defined" }
+    - { role: cups, tags: ['cups'] }
+    - { role: office, tags: ['office'] }
+    - { role: transmission, tags: ['transmission'] }
+    - { role: virtualbox, tags: ['virtualbox'] }
+    - { role: virtualenv, tags: ['virtualenv'] }
+    - { role: borg, tags: ['borg'] }
+    - { role: sound, tags: ['sound'] }
+    - { role: pim, tags: ['pim'] }
+    #- { role: formd, tags: ['formd'] }
+    - { role: calibre, tags: ['calibre'] }
+    - { role: parcimonie, tags: ['parcimonie'], when: "tor is defined" }
+    - { role: localtime, tags: ['localtime'], when: "localtime is defined" }
+    - { role: bluetooth, tags: ['bluetooth'], when: "bluetooth is defined" }
+    - { role: wttr, tags: ['wttr'] }
+    - { role: hostsctl, tags: ['hostsctl'], when: "hostsctl is defined" }
+    - { role: steam, tags: ['steam'] }
+  vars_prompt:
+    - name: user_password
+      prompt: "Enter desired user password"

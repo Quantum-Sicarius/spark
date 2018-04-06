@@ -1,0 +1,5 @@
+---
+- name: Install steam
+  pacman: name=steam state=present
+  tags:
+    - steam

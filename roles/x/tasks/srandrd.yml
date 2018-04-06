@@ -1,0 +1,7 @@
+---
+- name: Install srandrd
+  aur: name=srandrd user={{ user.name }}
+  tags:
+    - aur
+    - srandrd
+  ignore_errors: yes

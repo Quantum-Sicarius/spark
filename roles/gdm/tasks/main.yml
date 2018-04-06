@@ -1,0 +1,9 @@
+---
+- name: Install GDM
+  pacman: name={{ item }} state=present
+  with_items:
+      - gdm
+
+- name: Enable GDM
+  service: name=gdm.service enabled=yes
+  ignore_errors: yes
