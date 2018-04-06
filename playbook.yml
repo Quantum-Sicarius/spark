@@ -33,7 +33,7 @@
     - { role: mpd, tags: ['mpd'] }
     - { role: mpv, tags: ['mpv'] }
     - { role: git-annex, tags: ['git-annex'], when: "gitannex is defined" }
-    - { role: cups, tags: ['cups'] }
+    #- { role: cups, tags: ['cups'] }
     - { role: office, tags: ['office'] }
     - { role: transmission, tags: ['transmission'] }
     - { role: virtualbox, tags: ['virtualbox'] }
