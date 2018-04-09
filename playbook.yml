@@ -32,13 +32,12 @@
     - { role: media, tags: ['media'] }
     - { role: mpd, tags: ['mpd'] }
     - { role: mpv, tags: ['mpv'] }
-    - { role: git-annex, tags: ['git-annex'], when: "gitannex is defined" }
-    #- { role: cups, tags: ['cups'] }
+    - { role: cups, tags: ['cups'] }
     - { role: office, tags: ['office'] }
-    - { role: transmission, tags: ['transmission'] }
+    - { role: transmission, tags: ['transmission'], when: "transmission is defined" }
     - { role: virtualbox, tags: ['virtualbox'] }
     - { role: virtualenv, tags: ['virtualenv'] }
-    - { role: borg, tags: ['borg'] }
+    #- { role: borg, tags: ['borg'] }
     - { role: sound, tags: ['sound'] }
     - { role: pim, tags: ['pim'] }
     #- { role: formd, tags: ['formd'] }
@@ -51,6 +50,8 @@
     - { role: steam, tags: ['steam'] }
     - { role: telegram, tags: ['telegram'] }
     - { role: vlc, tags: ['vlc'] }
+    - { role: grub, tags: ['grub'] }
+    - { role: lastpass, tags: ['lastpass'] }
 
   vars_prompt:
     - name: user_password

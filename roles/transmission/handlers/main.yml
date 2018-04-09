@@ -1,0 +1,6 @@
+---
+
+- name: "reload systemd"
+  systemd:
+    name: transmission.service
+    daemon_reload: yes

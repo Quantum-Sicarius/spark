@@ -5,4 +5,5 @@
       - gnome
       - gnome-extra
       - gnome-tweaks
+      - gnome-control-center
   ignore_errors: yes

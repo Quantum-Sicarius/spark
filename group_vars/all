@@ -89,11 +89,21 @@ browser_choices:
     - qcode
     - "| xclip -selection c"
 
+firefox_profiles:
+    - name: default
+      extensions:
+        - adnauseam
+        - https-everywhere
+        - lastpass-password-manager
+        - privacy-badger17
+
+firefox_preferences:
+  browser.safebrowsing.enabled: 'true'
+  browser.safebrowsing.malware.enabled: 'true'
+  browser.safebrowsing.phishing.enabled: 'true'
+
 passwordless_sudo:
     - /usr/bin/openvpn*
-
-#gitannex:
-#    stop_on_untrusted: True
 
 bootloader: grub
 
@@ -135,7 +145,14 @@ udisks:
     shared_mount: True
 
 hostsctl:
-    url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+    #url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+    url: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts
+
+transmission:
+    transmission_blocklist_enabled: True
+    transmission_blocklist_url: http://john.bitsurge.net/public/biglist.p2p.gz
+    transmission_speed_limit_up_enabled: True
+    transmission_speed_limit_up: 100
 
 himawaripy:
     run_time: 15min
