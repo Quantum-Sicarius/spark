@@ -8,6 +8,7 @@
   file: src=/usr/bin/firejail
         dest=/usr/bin/telegram-desktop
         state=link
+        force=yes
   tags:
     - firejail
     - telegram
