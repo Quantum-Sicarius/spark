@@ -15,7 +15,7 @@
   tags:
     - shell
 
-- name: Cloning  oh-my-zsh
+- name: Cloning oh-my-zsh
   git:
     repo=https://github.com/robbyrussell/oh-my-zsh
     dest=~/.oh-my-zsh
@@ -28,4 +28,4 @@
     src=~/.oh-my-zsh/templates/zshrc.zsh-template
     dest=~/.zshrc
   when: cloning|success
-sudo: no
+  sudo: no
