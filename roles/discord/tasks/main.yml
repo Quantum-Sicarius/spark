@@ -1,0 +1,20 @@
+---
+- name: Install discord
+  aur: name=discord user={{ user.name }} skip_pgp=no
+  tags:
+    - aur
+    - discord
+
+- name: Jail discord
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/discord
+        state=link
+  tags:
+    - firejail
+    - discord
+
+- name: Verify discord firejail local profile exists
+  file: path=/etc/firejail/discord.local state=touch
+  tags:
+    - discord
+    - firejail

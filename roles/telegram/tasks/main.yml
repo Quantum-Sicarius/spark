@@ -1,5 +1,19 @@
 ---
-- name: Install telegram
+- name: Install telegram-desktop
   aur: name=telegram-desktop-bin user={{ user.name }}
   tags:
     - telegram
+
+- name: Jail telegram-desktop
+  file: src=/usr/bin/firejail
+        dest=/usr/bin/telegram-desktop
+        state=link
+  tags:
+    - firejail
+    - telegram
+
+- name: Verify telegram-desktop firejail local profile exists
+  file: path=/etc/firejail/telegram.local state=touch
+  tags:
+    - telegram
+    - firejail

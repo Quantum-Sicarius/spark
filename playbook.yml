@@ -53,6 +53,7 @@
     - { role: vlc, tags: ['vlc'] }
     - { role: grub, tags: ['grub'] }
     - { role: lastpass, tags: ['lastpass'] }
+    - { role: discord, tags: ['discord'] }
 
   vars_prompt:
     - name: user_password

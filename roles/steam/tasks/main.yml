@@ -3,3 +3,11 @@
   pacman: name=steam state=present
   tags:
     - steam
+
+- name: Jail steam
+  file: src=/usr/bin/firejail
+        dest=/usr/bin/discord
+        state=link
+  tags:
+    - firejail
+    - steam

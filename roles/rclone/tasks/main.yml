@@ -1,0 +1,5 @@
+---
+- name: Install rclone
+  pacman: name=rclone state=present
+  tags:
+    - rclone
