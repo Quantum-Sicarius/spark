@@ -44,6 +44,7 @@ editors:
 
 video_drivers:
     - libva-intel-driver
+    #- nvidia
 
 base_packages:
     - base-devel
@@ -149,9 +150,10 @@ hostsctl:
     url: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts
 
 transmission:
-    transmission_blocklist_enabled: True
+    transmission_download_dir: "/home/thomas/Downloads"
+    transmission_blocklist_enabled: true
     transmission_blocklist_url: http://john.bitsurge.net/public/biglist.p2p.gz
-    transmission_speed_limit_up_enabled: True
+    transmission_speed_limit_up_enabled: true
     transmission_speed_limit_up: 100
 
 himawaripy:
