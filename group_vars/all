@@ -3,7 +3,7 @@ user:
     uid: 1000
     group: thomas
     shell: /usr/bin/zsh
-    email:  thomas.scholtz1996@gmail.com
+    email: thomas.scholtz1996@gmail.com
     log:
         dir: log
         rotate: 8
