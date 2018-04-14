@@ -53,7 +53,8 @@
     - { role: vlc, tags: ['vlc'] }
     - { role: grub, tags: ['grub'] }
     - { role: lastpass, tags: ['lastpass'] }
-    - { role: discord, tags: ['discord'] }
+    # Discord has too complex dependency tree
+    #- { role: discord, tags: ['discord'] }
 
   vars_prompt:
     - name: user_password

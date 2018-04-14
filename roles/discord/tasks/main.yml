@@ -1,6 +1,6 @@
 ---
 - name: Install discord
-  aurman: name=discord user={{ user.name }} skip_pgp=no
+  aur: name=discord user={{ user.name }} skip_pgp=no
   tags:
     - aur
     - discord
