@@ -3,3 +3,11 @@
   pacman: name=syncthing state=present
   tags:
     - syncthing
+
+- name: Enable and start syncthing service
+  systemd: name=syncthing.service user=yes enabled=yes state=started
+  become: yes
+  become_user: "{{ user.name }}"
+  environment:
+    XDG_RUNTIME_DIR: "/run/user/{{ user.uid }}"
+  when: syncthing.run_on == "all"
