@@ -4,17 +4,17 @@
   tags:
     - telegram
 
-- name: Jail telegram-desktop
-  file: src=/usr/bin/firejail
-        dest=/usr/bin/telegram-desktop
-        state=link
-        force=yes
-  tags:
-    - firejail
-    - telegram
+#- name: Jail telegram-desktop
+#  file: src=/usr/bin/firejail
+#        dest=/usr/bin/telegram-desktop
+#        state=link
+#        force=yes
+#  tags:
+#    - firejail
+#    - telegram
 
-- name: Verify telegram-desktop firejail local profile exists
-  file: path=/etc/firejail/telegram.local state=touch
-  tags:
-    - telegram
-    - firejail
+#- name: Verify telegram-desktop firejail local profile exists
+#  file: path=/etc/firejail/telegram.local state=touch
+#  tags:
+#    - telegram
+#    - firejail

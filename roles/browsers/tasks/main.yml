@@ -122,5 +122,3 @@
   tags:
     - tor-browser
     - firejail
-    
-  ignore_errors: yes

@@ -3,3 +3,11 @@
   pacman: name=vlc state=present
   tags:
     - vlc
+
+- name: Jail telegram-desktop
+  file: src=/usr/bin/firejail
+        dest=/usr/local/bin/vlc
+        state=link
+  tags:
+    - firejail
+    - vlc
