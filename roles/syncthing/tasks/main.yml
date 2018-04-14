@@ -3,11 +3,3 @@
   pacman: name=syncthing state=present
   tags:
     - syncthing
-
-- name: Jail syncthing
-  file: src=/usr/bin/firejail
-        dest=/usr/local/bin/syncthing
-        state=link
-  tags:
-    - firejail
-    - syncthing
