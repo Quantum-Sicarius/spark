@@ -49,6 +49,7 @@
     - { role: hostsctl, tags: ['hostsctl'], when: "hostsctl is defined" }
     - { role: steam, tags: ['steam'] }
     - { role: telegram, tags: ['telegram'] }
+    - { role: vscode, tags: ['vscode'] }
     - { role: vlc, tags: ['vlc'] }
     - { role: grub, tags: ['grub'] }
     - { role: lastpass, tags: ['lastpass'] }
