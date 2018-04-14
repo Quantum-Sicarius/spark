@@ -53,6 +53,7 @@
     - { role: vlc, tags: ['vlc'] }
     - { role: grub, tags: ['grub'] }
     - { role: lastpass, tags: ['lastpass'] }
+    - { role: syncthing, tags: ['syncthing']}
     # Discord has too complex dependency tree
     #- { role: discord, tags: ['discord'] }
 
