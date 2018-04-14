@@ -1,5 +1,0 @@
----
-- name: Install Visual studio code
-  aur: name=visual-studio-code-bin state=present
-  tags:
-    - vscode

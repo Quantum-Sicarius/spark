@@ -9,6 +9,7 @@
     - gutenprint
     - hplip
     - gtk3-print-backends
+  ignore_errors: yes
 
 - name: Add a print admin group
   group: name=printadmin state=present

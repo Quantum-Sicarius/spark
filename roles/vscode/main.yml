@@ -1,0 +1,5 @@
+---
+- name: Install vscode
+  aur: name=vscode-bin user={{ user.name }}
+  tags:
+    - vscode

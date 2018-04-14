@@ -1,5 +1,5 @@
 ---
-- name: Install telegram desktop
-  aur: name=telegram-desktop-bin state=present
+- name: Install telegram
+  aur: name=telegram-desktop-bin user={{ user.name }}
   tags:
     - telegram

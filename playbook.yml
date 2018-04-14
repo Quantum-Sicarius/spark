@@ -37,7 +37,7 @@
     - { role: transmission, tags: ['transmission'], when: "transmission is defined" }
     - { role: virtualbox, tags: ['virtualbox'] }
     - { role: virtualenv, tags: ['virtualenv'] }
-    #- { role: borg, tags: ['borg'] }
+    - { role: borg, tags: ['borg'] }
     - { role: sound, tags: ['sound'] }
     - { role: pim, tags: ['pim'] }
     #- { role: formd, tags: ['formd'] }
