@@ -8,7 +8,7 @@ user:
         dir: log
         rotate: 8
 
-hostname: skywalker
+hostname: skywalker-pc
 
 #dotfiles:
 #    url: git@github.com:pigmonkey/dotfiles.git
@@ -43,8 +43,8 @@ editors:
     - nano
 
 video_drivers:
-    - libva-intel-driver
-    #- nvidia
+    #- libva-intel-driver
+    - nvidia
 
 base_packages:
     - base-devel
@@ -116,11 +116,11 @@ tor:
 localtime:
     run_on: all
 
-unbound:
-    tls: True
-    nameservers:
-        - 1.1.1.1@853  # Cloudflare
-        - 9.9.9.9@853  # Quad9
+#unbound:
+#    tls: True
+#    nameservers:
+#        - 1.1.1.1@853  # Cloudflare
+#        - 9.9.9.9@853  # Quad9
 
 bluetooth:
     disable: False
@@ -146,15 +146,42 @@ udisks:
     shared_mount: True
 
 hostsctl:
-    #url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-    url: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts
+    url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+    #url: https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts
 
 transmission:
+    transmission_user: "transmission"
+    transmission_group: "transmission"
     transmission_download_dir: "/home/thomas/Downloads"
     transmission_blocklist_enabled: true
     transmission_blocklist_url: http://john.bitsurge.net/public/biglist.p2p.gz
     transmission_speed_limit_up_enabled: true
     transmission_speed_limit_up: 100
+
+    transmission_password: transmission
+    transmission_url: '/transmission/'
+
+    transmission_rpc_auth_enabled: false
+    transmission_rpc_whitelist_enabled: true
+    transmission_rpc_whitelist: 127.0.0.1
+    transmission_rpc_auth_required: false
+    transmission_rpc_host_whitelist_enabled: true
+    transmission_rpc_host_whitelist: ""
+
+    transmission_umask: 2
+
+    transmission_incomplete_dir_enabled: false
+    transmission_incomplete_dir: "{{ ansible_env.HOME }}/.incomplete"
+    transmission_watch_dir_enabled: false
+    transmission_watch_dir: "{{ ansible_env.HOME }}/torrents"
+
+    transmission_ratio_limit_enabled: false
+    transmission_ratio_limit: 2
+    transmission_speed_limit_down_enabled: false
+    transmission_speed_limit_down: 100
+
+    transmission_peer_port: 51413
+    transmission_port_forwarding_enabled: false
 
 himawaripy:
     run_time: 15min
